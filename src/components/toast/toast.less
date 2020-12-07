@@ -1,0 +1,94 @@
+.seeyou-fade-enter-active,
+.seeyou-fade-leave-active,
+.seeyou-rightin-enter-active,
+.seeyou-rightin-leave-active,
+.seeyou-buttomin-enter-active,
+.seeyou-buttomin-leave-active,
+.seeyou-topin-enter-active,
+.seeyou-topin-leave-active,
+.seeyou-leftin-enter-active,
+.seeyou-leftin-leave-active {
+  transition: all 0.5s;
+}
+
+.seeyou-fade-enter,
+.seeyou-fade-leave-to {
+  opacity: 0;
+}
+
+.seeyou-toast.seeyou-topin-enter,
+.seeyou-toast.seeyou-topin-leave-to {
+  transform: translate(-50%, -100%);
+  opacity: 0;
+}
+
+.seeyou-toast.seeyou-buttomin-enter,
+.seeyou-toast.seeyou-buttomin-leave-to {
+  transform: translate(-50%, 0%);
+  opacity: 0;
+}
+
+.seeyou-toast.seeyou-rightin-enter,
+.seeyou-toast.seeyou-rightin-leave-to {
+  transform: translate(0%, -50%);
+  opacity: 0;
+}
+
+.seeyou-toast.seeyou-leftin-enter,
+.seeyou-toast.seeyou-leftin-leave-to {
+  transform: translate(-100%, -50%);
+  opacity: 0;
+}
+
+.seeyou-toast {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seeyou-toast-pop {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+
+}
+
+.seeyou-toast-loading {
+  // background: rgba(111, 111, 111, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    animation:loading 1.5s linear infinite;
+    li {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: aqua;
+    }
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+}
